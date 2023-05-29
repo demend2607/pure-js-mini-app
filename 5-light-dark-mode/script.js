@@ -53,7 +53,7 @@ if (currentTheme) {
 	document.documentElement.setAttribute('data-theme', currentTheme);
 
 	if (currentTheme === 'dark') {
-		toggleSwitch.cheked = true;
+		toggleSwitch.checked = true;
 		darkMode();
 	}
 }

@@ -22,16 +22,14 @@ function darkLightMode(isDark) {
 	textBox.style.backgroundColor = isDark
 		? 'rgb(255 255 255 / 50%)'
 		: 'rgb(0 0 0 / 50%)';
-	// Change the Image in About Block
-	isDark
-		? (toggleIcon.children[0].textContent = 'Dark Mode')
-		: (toggleIcon.children[0].textContent = 'Light Mode');
+	// Change Text
+	toggleIcon.children[0].textContent = isDark ? 'Dark Mode' : 'Light Mode';
 	// Change the Icon in Toggle Switch
 	isDark
 		? toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon')
 		: toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
-	imageMode('dark');
-	imageMode('light');
+	// Change the Image in About Block
+	isDark ? imageMode('dark') : imageMode('light');
 }
 
 // Switch Theme Dynamically
